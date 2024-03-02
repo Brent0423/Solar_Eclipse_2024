@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>2024 Solar Eclipse Explorer</title>
+    <link
+      rel="stylesheet"
+      href="{{ url_for('static', filename='style.css') }}"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="site-header container">
+      <h1>2024 Solar Eclipse Explorer</h1>
+    </header>
+    <main>
+      <section id="hero-section" class="hero-padding">
+        <div class="hero-container container">
+          <h2>Maximize Your Eclipse Experience</h2>
+          <p>
+            Discover the closest point to you on the central line of totality,
+            where the 2024 Solar Eclipse can be experienced for the longest
+            duration. Our tool not only guides you to the best viewing spot but
+            also provides detailed directions to ensure you reach your
+            destination effortlessly.
+          </p>
+          <button id="findLocation" class="hero-button">
+            Find Optimal Viewing Location
+          </button>
+        </div>
+      </section>
+      <section id="about" class="section-padding container">
+        <div class="about-container">
+          <h3>Our Mission</h3>
+          <p>
+            Our mission is to make celestial phenomena accessible, guiding you
+            to the perfect spot for the most memorable eclipse viewing
+            experience. With precise directions and expert recommendations, we
+            ensure your journey to the eclipse is as spectacular as the event
+            itself.
+          </p>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer container">
+      <div class="container">
+        <p>&copy; 2024 Solar Eclipse Explorer.</p>
+      </div>
+    </footer>
+
+    <!-- Map Modal -->
+    <div id="mapModal" class="modal">
+      <div class="modal-content">
+        <button class="close-button">&times;</button>
+        <!-- Map Container -->
+        <div id="map" class="map-container"></div>
+      </div>
+    </div>
+    <script type="module" src="static/coordinates.js"></script>
+    <script type="module" src="static/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDa2VVoEPHTkxux-9ujoERVWQ6Q24bGLpo"></script>
+  </body>
+</html>
