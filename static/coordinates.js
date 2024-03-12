@@ -1,3 +1,5 @@
+// This file contains an array of coordinates for the solar eclipse viewing path. Each coordinate includes the latitude, longitude, time, and duration of the eclipse.
+
 export const coordinatesArray = [{
   coord: "07°49.3'S 158°31.9'W",
   time: "16:38",

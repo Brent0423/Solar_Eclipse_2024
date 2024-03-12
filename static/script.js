@@ -1,12 +1,11 @@
 import { coordinatesArray } from './coordinates.js';
 
-// Define the AppState constructor function to manage the application state
+// Define the AppState constructor function
 function AppState() {
     this.state = {
         mapInstance: null, // Google Maps instance
         userLocation: null, // User's current location
         closestLocation: null, // Closest location for viewing the eclipse
-        showSpinner: false, // Flag to show/hide a loading spinner
         dataFetched: false, // Flag to indicate if data has been fetched
     };
 }
@@ -23,7 +22,6 @@ AppState.deg2rad = function(deg) {
 
 // Function to calculate the distance between two coordinates using the Haversine formula
 AppState.calculateDistance = function(lat1, lng1, lat2, lng2) {
-    console.log(`Calculating distance between (${lat1}, ${lng1}) and (${lat2}, ${lng2})`);
     // Validate input coordinates
     if ([lat1, lng1, lat2, lng2].some(coord => typeof coord !== 'number' || coord == null)) {
         console.error('Invalid or missing input values for calculateDistance');
@@ -44,7 +42,6 @@ AppState.calculateDistance = function(lat1, lng1, lat2, lng2) {
 
 // Method to get the user's current location using the Geolocation API
 AppState.prototype.getUserLocation = async function() {
-    console.log('getUserLocation method invoked');
     // Check if Geolocation is supported
     if (!('geolocation' in navigator)) {
         console.error('Geolocation is not supported by this browser.');
@@ -55,7 +52,6 @@ AppState.prototype.getUserLocation = async function() {
         navigator.geolocation.getCurrentPosition(position => {
             const { latitude, longitude } = position.coords;
             this.setState('userLocation', { lat: latitude, lng: longitude });
-            console.log('User Location Set:', { lat: latitude, lng: longitude });
             resolve();
         }, error => {
             console.error('Geolocation error:', error);
@@ -66,7 +62,6 @@ AppState.prototype.getUserLocation = async function() {
 
 // Method to find the closest polygon coordinates to the user's location
 AppState.prototype.findClosestPolyCoordinates = async function() {
-    console.log('Attempting to find closest polygon coordinates with user location:', this.state.userLocation);
     // Validate user location and coordinates array
     if (!this.state.userLocation || typeof this.state.userLocation.lat !== 'number' || typeof this.state.userLocation.lng !== 'number') {
         console.error('User location is not set or contains invalid values.');
@@ -92,7 +87,6 @@ AppState.prototype.findClosestPolyCoordinates = async function() {
     // Update state with the closest location
     if (closestPolyCoordinates) {
         this.setState('closestLocation', closestPolyCoordinates);
-        console.log(`Closest polygon coordinates found at (${closestPolyCoordinates.lat}, ${closestPolyCoordinates.lng})`);
     } else {
         console.error('No closest polygon coordinates found within a reasonable distance.');
         throw new Error('No closest polygon coordinates found within a reasonable distance.');
@@ -137,7 +131,7 @@ AppState.prototype.initializeMap = async function() {
     const infoWindowContent = `
         <div style="font-family: Arial, sans-serif; color: #323232;">
             <h3>Total Solar Eclipse</h3>
-            <p><strong>Address:</strong> ${coordinates.coord}</p>
+            <p><strong>Location:</strong> ${coordinates.coord}</p>
             <p><strong>Time:</strong> ${coordinates.time}</p>
             <p><strong>Duration:</strong> ${coordinates.duration}</p>
             <p><a href="https://www.google.com/maps/dir/?api=1&destination=${coordinates.lat},${coordinates.lng}" target="_blank">Get Directions</a></p>
@@ -196,5 +190,18 @@ document.addEventListener('DOMContentLoaded', function() {
         appState.openMapModal(); // Open the map modal after preparing the map
     });
 
-    // ... other event listeners and functions ...
+    // Add a click event listener to the "Close" button in the modal
+    const closeButton = document.querySelector('.close-button');
+    closeButton.addEventListener('click', function() {
+        const modal = document.getElementById('mapModal');
+        modal.style.display = 'none';
+    });
+
+    // Allow modal to close when clicking outside it
+    window.addEventListener('click', function(event) {
+        const modal = document.getElementById('mapModal');
+        if (event.target == modal) {
+            modal.style.display = 'none';
+        }
+    });
 });

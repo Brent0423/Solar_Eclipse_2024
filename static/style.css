@@ -1,115 +1,116 @@
 /* Color Scheme */
 html, body {
-    height: 100vh; /* Sets the height to fill the entire viewport */
-    overflow: hidden; /* Prevents scrolling on the webpage */
-    margin: 0; /* Eliminates the default margin */
-    padding: 0; /* Eliminates the default padding */
-    box-sizing: border-box; /* Adjusts box-sizing to include padding and border in the element's total width and height */
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
+
 body {
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('SolarEclipse.jpg'); /* Adds a semi-transparent overlay to enhance the background image */
-    background-size: cover; /* Ensures the background covers the full page */
-    background-attachment: fixed; /* Keeps the background image fixed during scrolling */
-    color: #e8e8e8; /* Sets a light grey color for text for better readability */
-    text-align: center; /* Aligns text to the center */
-    font-family: 'Open Sans', sans-serif; /* Sets a clean, modern sans-serif font */
-    font-size: 1.25rem; /* Sets a base font size for readability */
-    line-height: 1.6; /* Increases line height for better text readability */
-    display: flex; /* Enables flexbox layout */
-    flex-direction: column; /* Stacks flex items in a column */
-    justify-content: space-around; /* Distributes space around flex items */
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('SolarEclipse.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+    color: #e8e8e8;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
 }
 
 /* Typography */
 h1, h2, h3 {
-    font-weight: 700; /* Makes headings bold */
-    color: #f9c74f; /* Sets headings to a golden color */
-    text-shadow: 2px 2px 4px rgba(0,0,0,0.9); /* Adds a shadow for a 3D effect */
-    margin: 40px 0; /* Adds more space around headings */
+    font-weight: 700;
+    color: #f9c74f;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.9);
+    margin: 40px 0;
 }
 
 h1 {
-    font-size: 3.5rem; /* Sets a larger font size for primary headings */
+    font-size: 3.5rem;
 }
 
 h2, h3 {
-    font-size: 2.5rem; /* Sets a uniform font size for secondary and tertiary headings */
+    font-size: 2.5rem;
 }
 
 /* Links */
 a {
-    color: #f4d35e; /* Sets link color to a softer golden shade */
-    text-decoration: none; /* Removes underline from links */
-    transition: color 0.3s; /* Animates color change smoothly */
-    margin: 10px 0; /* Adds vertical spacing around links */
-    font-size: 1rem; /* Sets a standard font size for links */
+    color: #f4d35e;
+    text-decoration: none;
+    transition: color 0.3s;
+    margin: 10px 0;
+    font-size: 1rem;
 }
 
 a:hover {
-    text-decoration: underline; /* Underlines links on hover for visual feedback */
-    color: #f9c74f; /* Changes link color on hover to a brighter gold */
+    text-decoration: underline;
+    color: #f9c74f;
 }
 
 /* Buttons */
 .hero-button, .find-button {
-    background-color: #252525; /* Sets a dark background for buttons */
-    color: #ffffff; /* Sets button text to white for contrast */
-    border: 2px solid #f9c74f; /* Adds a golden border for visual appeal */
-    padding: 25px 60px; /* Increases padding for a larger clickable area */
-    border-radius: 20px; /* Rounds the corners of the buttons */
-    cursor: pointer; /* Changes the cursor to indicate clickable items */
-    font-size: 1.25rem; /* Increases font size for better visibility */
-    font-weight: 500; /* Sets a medium font weight for button text */
-    transition: all 0.3s; /* Smoothly animates all transitions */
-    display: inline-block; /* Allows buttons to sit inline with other elements */
-    margin: 30px auto; /* Centers buttons and adds vertical spacing */
+    background-color: #252525;
+    color: #ffffff;
+    border: 2px solid #f9c74f;
+    padding: 25px 60px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1.25rem;
+    font-weight: 500;
+    transition: all 0.3s;
+    display: inline-block;
+    margin: 30px auto;
 }
 
 .hero-button:hover, .find-button:hover {
-    background-color: #f9c74f; /* Changes the background to gold on hover */
-    color: #252525; /* Changes the text color to dark on hover */
-    transform: scale(1.1); /* Slightly enlarges buttons on hover for emphasis */
+    background-color: #f9c74f;
+    color: #252525;
+    transform: scale(1.1);
 }
 
 /* Results Section */
 .result-container {
-    background-color: #ffffff; /* Sets a light background for contrast */
-    color: #333; /* Sets text color to dark grey for readability */
-    padding: 30px; /* Adds padding for spacing inside the container */
-    border-radius: 10px; /* Rounds the corners of the container */
-    margin: 20px 0; /* Adds vertical spacing around the container */
-    font-size: 1rem; /* Sets a standard font size for content */
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Adds a subtle shadow for depth */
+    background-color: #ffffff;
+    color: #333;
+    padding: 30px;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 1rem;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
 /* Footer */
 .site-footer {
-    color: #cccccc; /* Sets footer text to light grey for a subtle look */
-    padding: 30px 0; /* Adds padding for spacing within the footer */
-    margin-top: 20px; /* Adds space above the footer */
-    font-size: 0.875rem; /* Sets a smaller font size for footer text */
-    background: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent dark background for overlay effect */
+    color: #cccccc;
+    padding: 30px 0;
+    margin-top: 20px;
+    font-size: 0.875rem;
+    background: rgba(0, 0, 0, 0.7);
 }
 
 /* New Container Class for Better Layout Management */
 .container {
-    max-width: 1200px; /* Sets a maximum width to contain content */
-    margin: 0 auto; /* Centers the container within the parent */
-    padding: 0 20px; /* Adds padding on the sides for spacing */
-    font-size: 1rem; /* Sets a standard font size for container content */
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    font-size: 1rem;
 }
 
 /* Modal Animations */
 .modal {
-    animation: modalFadeIn 0.5s; /* Applies a fade-in effect when the modal opens */
+    animation: modalFadeIn 0.5s;
 }
 
 .modal .close {
-    transition: transform 0.3s ease; /* Smoothly animates the close button transformation */
+    transition: transform 0.3s ease;
 }
 
 .modal .close:hover {
-    transform: rotate(90deg); /* Rotates the close button on hover for a visual cue */
+    transform: rotate(90deg);
 }
 
 @keyframes modalFadeIn {
@@ -124,74 +125,78 @@ a:hover {
 
 /* Apply fade out animation when closing modal */
 .modal-closing {
-    animation: modalFadeOut 0.5s forwards; /* Ensures the fade-out animation plays to completion */
+    animation: modalFadeOut 0.5s forwards;
 }
+
 /* Modal Styles */
 .modal {
-    display: none; /* Keeps the modal hidden by default */
-    position: fixed; /* Fixes the modal's position relative to the viewport */
-    z-index: 2; /* Ensures the modal appears above other content but below the highest layers */
+    display: none;
+    position: fixed;
+    z-index: 2;
     left: 0;
     top: 0;
-    width: 100%; /* Spans the modal across the full width of the viewport */
-    height: 100%; /* Spans the modal across the full height of the viewport */
-    overflow: auto; /* Allows scrolling within the modal if necessary */
-    background-color: rgba(0,0,0,0.6); /* Adds a dark, semi-transparent overlay for focus on the modal content */
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.6);
 }
 
 .modal-content {
-    position: relative; /* Positions the modal content relative to the modal */
-    margin: 10% auto; /* Centers the content with a vertical margin */
-    padding: 20px; /* Adds padding inside the content area for spacing */
-    width: 80%; /* Sets the width relative to the modal size for a balanced appearance */
-    height: 80%; /* Sets the height relative to the modal size for a balanced appearance */
-    max-width: 1200px; /* Limits the maximum width to prevent overly large modals */
-    max-height: 1200px; /* Limits the maximum height to prevent overly tall modals */
-    display: flex; /* Enables flexbox layout for content alignment */
-    align-items: center; /* Vertically centers the content */
-    justify-content: center; /* Horizontally centers the content */
-    border-radius: 20px; /* Rounds the corners for a softer look */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.2); /* Adds a shadow for visual depth */
+    position: relative;
+    margin: 10% auto;
+    padding: 20px;
+    width: 80%;
+    height: 80%;
+    max-width: 1200px;
+    max-height: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
 }
 
 .close-button {
-    background: none; /* Removes any background styling */
-    border: none; /* Removes any border styling */
-    padding: 0; /* Removes padding for a clean look */
-    color: #FFD700; /* Sets the color to a bright gold for visibility */
-    cursor: pointer; /* Changes the cursor to indicate an interactive element */
-    font-size: 2rem; /* Increases the font size for better visibility */
-    line-height: 1; /* Adjusts the line height for proper alignment */
-    position: absolute; /* Positions the button absolutely within its parent */
-    top: 10px; /* Positions the button near the top of its parent */
-    right: 10px; /* Positions the button near the right of its parent */
-    text-shadow: 0 0 8px #FFD700, 0 0 16px #FFD700, 0 0 24px #FFD700, 0 0 32px #FF8C00, 0 0 56px #FF8C00, 0 0 64px #FF8C00, 0 0 80px #FF8C00, 0 0 120px #FF8C00; /* Adds a glowing effect for emphasis */
+    background: none;
+    border: none;
+    padding: 0;
+    color: #FFD700;
+    cursor: pointer;
+    font-size: 2rem;
+    line-height: 1;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    text-shadow: 0 0 8px #FFD700, 0 0 16px #FFD700, 0 0 24px #FFD700, 0 0 32px #FF8C00, 0 0 56px #FF8C00, 0 0 64px #FF8C00, 0 0 80px #FF8C00, 0 0 120px #FF8C00;
 }
+
 .close:hover,
 .close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-    background: none; /* Ensures no background change on hover/focus for a consistent look */
+    background: none;
 }
+
 /* Responsive Modal */
 @media screen and (max-width: 768px) {
     .modal-content {
-        width: 90%; /* Adjusts width for better fit on tablet devices */
-        margin: 10% auto; /* Centers content with adjusted margin for visual balance */
+        width: 90%;
+        margin: 10% auto;
     }
 }
 
 @media screen and (max-width: 480px) {
     .modal-content {
-        width: 95%; /* Adjusts width for better fit on mobile devices */
-        margin: 5% auto; /* Centers content with reduced top margin for visual balance */
+        width: 95%;
+        margin: 5% auto;
     }
 }
+
 #map {
-    height: 600px; /* Sets a fixed height for the map for adequate detail */
+    height: 600px;
     width: 100%;
-    border: none; /* Removes any default border */
-    padding: 0; /* Removes any default padding */
-    margin: 0; /* Removes any default margin */
+    border: none;
+    padding: 0;
+    margin: 0;
 }
