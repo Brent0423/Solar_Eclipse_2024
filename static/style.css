@@ -200,3 +200,43 @@ a:hover {
     padding: 0;
     margin: 0;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+    .modal-content {
+        width: 100%;
+        margin: 5% auto;
+    }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    .modal-content {
+        width: 80%;
+        margin: 5% auto;
+    }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    .modal-content {
+        width: 75%;
+        margin: 5% auto;
+    }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+    .modal-content {
+        width: 70%;
+        margin: 5% auto;
+    }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+    .modal-content {
+        width: 60%;
+        margin: 5% auto;
+    }
+}
