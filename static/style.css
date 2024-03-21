@@ -240,3 +240,18 @@ a:hover {
         margin: 5% auto;
     }
 }
+/* iPhone in portrait orientation */
+@media only screen and (min-device-width: 375px) and (max-device-width: 667px) and (orientation: portrait) {
+    body, html {
+        overflow-y: auto;
+    }
+
+    #map {
+        height: 400px; /* Adjust height for better display on smaller screens */
+    }
+
+    .modal-content {
+        width: 95%; /* Increase width for better visibility */
+        margin: 10% auto; /* Adjust margin for better centering */
+    }
+}
