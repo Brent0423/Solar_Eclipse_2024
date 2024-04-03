@@ -132,7 +132,7 @@ AppState.prototype.initializeMap = async function() {
         <div style="font-family: Arial, sans-serif; color: #323232;">
             <h3>Total Solar Eclipse</h3>
             <p><strong>Location:</strong> ${coordinates.coord}</p>
-            <p><strong>Time:</strong> ${coordinates.time}</p>
+            <p><strong>Time (UTC):</strong> ${coordinates.time}</p>
             <p><strong>Duration:</strong> ${coordinates.duration}</p>
             <p><a href="https://www.google.com/maps/dir/?api=1&destination=${coordinates.lat},${coordinates.lng}" target="_blank">Get Directions</a></p>
         </div>
