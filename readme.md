@@ -1,7 +1,6 @@
 # Solar Eclipse Explorer Flask Application
 
-This project is a Flask web application designed to provide information and interactive features related to viewing the 2024 Solar Eclipse. It is containerized using Docker for easy setup and deployment.
-
+The application identifies the closest viewing location for the 2024 Solar Eclipse by comparing the user's current location against a set of predefined coordinates. It calculates distances using the Haversine formula and selects the minimum distance to determine the closest point. This point is then displayed on a Google Map within the app, providing users with information and directions to the optimal viewing location. The process involves fetching the user's location, calculating distances, updating the app's state with the closest location, and visually representing this information on a map.
 ## Prerequisites
 
 Before you begin, ensure you have Docker installed on your machine.
